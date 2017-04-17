@@ -1,0 +1,16 @@
+html {
+  font-family: 'Roboto', serif;
+  font-size: 14px;
+  line-height: 1.25;
+}
+body {
+  position: relative;
+}
+
+.app {
+  background-color: green;
+}
+
+body, .app {
+  height: 100vh;
+}
