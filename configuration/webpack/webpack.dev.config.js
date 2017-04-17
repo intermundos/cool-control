@@ -4,6 +4,8 @@ import { resolve, join } from 'path'
 import babelConfig from '../babel/babel.dev.config'
 
 const srcPath = resolve('client')
+const excludeNode = /node_modules/
+
 
 export default {
   devtool: 'eval',
@@ -20,7 +22,7 @@ export default {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: excludeNode,
         include: srcPath,
         loader: 'babel-loader',
         query: babelConfig
@@ -46,7 +48,7 @@ export default {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              data: '@import "./static/sass/sassutils";',
+              data: '@import "../configuration/sass/sassutils";',
               includePaths: [
                 srcPath
               ]
