@@ -1,12 +1,12 @@
 import React from 'react'
-import '../static/styles/libs.scss'
+import '../static/styles/styles.scss'
 import './App.scss'
 
 
-const App = (props) => {
+const App = () => {
   return (
     <div className="app">
-      <button className="button">puck</button>
+      <button className="button">click</button>
     </div>
   )
 }

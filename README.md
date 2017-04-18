@@ -8,6 +8,7 @@
 - Redux Saga
 - React Router 4
 - SASS + Postcss
+- Bulma.io - flexbox css framework
 - axios
 - lodash
 

@@ -7,7 +7,7 @@ import babelConfig from "../babel/babel.dev.config";
 const srcPath       = resolve('client')
 const excludeNode   = /node_modules/
 const includeNode   = resolve('node_modules')
-const cssLibs       = resolve('client/static/styles/libs')
+const cssLibs       = resolve('client/static/styles/styles')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
