@@ -22,6 +22,9 @@ export default {
         filename: 'bundle.js',
         publicPath: ''
     },
+    resolve: {
+        modules: [ includeNode, srcPath ]
+    },
     module: {
         rules: [
             {
