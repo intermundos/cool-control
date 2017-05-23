@@ -1,10 +1,10 @@
-import express              from "express";
-import fallback from 'connect-history-api-fallback'
-import {join, resolve}      from "path";
-import webpack              from "webpack";
-import webpackConfig        from "../configuration/webpack/webpack.dev.config";
-import webpackDevMiddleware from "webpack-dev-middleware";
-import webpackHotMiddleware from "webpack-hot-middleware";
+import express from "express"
+import fallback from "connect-history-api-fallback"
+import { join, resolve } from "path"
+import webpack from "webpack"
+import webpackConfig from "../configuration/webpack/webpack.dev.config"
+import webpackDevMiddleware from "webpack-dev-middleware"
+import webpackHotMiddleware from "webpack-hot-middleware"
 
 let server          = express()
 let webpackCompiler = webpack(webpackConfig)

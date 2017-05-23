@@ -1,0 +1,15 @@
+.temp-view {
+  font-size: 370px;
+  letter-spacing: -10px;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 20%;
+  }
+}
