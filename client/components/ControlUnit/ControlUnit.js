@@ -1,7 +1,8 @@
 import './ControlUnit.scss'
 import React, { Component } from 'react'
+import TouchPanel from './TouchPanel'
 import TempView from './TempView'
-import Button from './Button'
+import ControlButton from './Button'
 
 const increase = (state, props) => {
   return {
@@ -29,12 +30,38 @@ class ControlUnit extends Component {
     this.state.temp > this.state.minT ? this.setState( decrease({ temp: this.state.temp}, { step: 1 }) ) : false
   }
 
+  touchStart = (e) => {
+    let startY = 0;
+    let y = e.clientY
+
+
+    console.log(startY + y)
+
+  }
+
   render() {
+    const { temp, maxT, minT } = this.state
     return (
       <div className="control-unit">
-        <Button onClick={ this.increaseTemp }>UP</Button>
-        <TempView temp={ this.state.temp }/>
-        <Button onClick={ this.decreaseTemp }>DOWN</Button>
+
+        <TouchPanel onClick={ this.touchStart }>
+
+          <ControlButton onClick={ this.increaseTemp }
+                         isVisible={ !(temp === maxT) } >
+            +
+          </ControlButton>
+
+          <TempView temp={ this.state.temp }/>
+
+          <ControlButton onClick={ this.decreaseTemp }
+                         isVisible={ !(temp === minT) } >
+            -
+          </ControlButton>
+
+        </TouchPanel>
+
+
+
       </div>
     )
   }
