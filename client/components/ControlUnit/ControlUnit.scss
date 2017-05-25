@@ -1,10 +1,11 @@
 .control-unit {
   height: 100vh;
-  background-color: blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
   user-select: none;
+
+  //background-image: linear-gradient(to right, rgb(102, 27, 210) 0%, rgb(37, 115, 232) 100%);
 }

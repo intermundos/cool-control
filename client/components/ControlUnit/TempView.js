@@ -4,7 +4,11 @@ import React from 'react'
 const TempView = props => {
 
   return (
-    <div className="temp-view">{ props.temp }</div>
+    <div className="temp-view">
+      <div className="digits">
+        { props.temp }
+      </div>
+    </div>
   )
 }
 

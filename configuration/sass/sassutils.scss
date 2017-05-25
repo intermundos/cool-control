@@ -1,1 +1,26 @@
 @import "colors";
+
+$mq-324: 324px;
+$mq-768: 768px;
+$mq-1024: 1024px;
+$mq-1200: 1200px;
+$mq-1600: 1600px;
+
+
+@function between($to, $from, $toWidth, $fromWidth) {
+  $slope: ($to - $from) / ($toWidth - $fromWidth);
+  $base: $from - $slope * $fromWidth;
+  @return calc(#{$base} + #{100vw * $slope});
+}
+
+@mixin between($property, $from, $to, $fromWidth, $toWidth) {
+  #{$property}: $to;
+
+  @media screen and (min-width: $toWidth){
+    #{$property}: between($to, $from, $toWidth, $fromWidth);
+  }
+
+  @media screen and (min-width: $fromWidth) {
+    #{$property}: $from;
+  }
+}

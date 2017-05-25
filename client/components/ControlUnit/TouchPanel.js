@@ -6,8 +6,14 @@ class TouchPanel extends Component {
 
   render() {
 
+    const { onMouseDown, onMouseMove, onMouseUp } = this.props
+
     return (
-      <div className="touch-panel" onMouseDown={ this.props.onClick }>
+      <div className="touch-panel"
+           onMouseDown={ onMouseDown }
+           onMouseUp={ onMouseUp }
+           onMouseMove={ onMouseMove }
+      >
         { this.props.children }
       </div>
     )

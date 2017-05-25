@@ -1,15 +1,23 @@
 .temp-view {
-  font-size: 370px;
-  letter-spacing: -10px;
-  position: relative;
 
-  &:after {
-    content: '';
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    position: absolute;
-    top: 20%;
+  @include between('font-size', 370px, 190px, 1440px, 320px);
+  letter-spacing: -10px;
+  line-height: 1.25;
+
+  .digits {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 15px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      position: absolute;
+      top: 20%;
+      left: 100%;
+      @include between('width', 15px, 10px, 1440px, 320px);
+      @include between('height', 15px, 10px, 1440px, 320px);
+    }
   }
 }
